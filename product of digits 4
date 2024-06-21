@@ -1,0 +1,78 @@
+A supermarket maintains a pricing format for all its products. A value N is printed on each product. When the scanner reads the value N on the item, the product of all the digits in the value N is the price of the item. The task here is to design the software such that given the code of any item N the product (multiplication) of all the digits of value should be computed(price).
+
+Input Format
+
+Read n value
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Product of digits
+
+Sample Input 0
+
+5244
+Sample Output 0
+
+160
+Sample Input 1
+
+32650
+Sample Output 1
+
+180
+Submissions: 96
+Max Score: 20
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+import java.io.*;
+2
+import java.util.*;
+3
+​
+4
+public class Solution {
+5
+​
+6
+    public static void main(String[] args) {
+7
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+8
+     int n,p=1;
+9
+     Scanner s=new Scanner(System.in);
+10
+     n=s.nextInt();
+11
+     while(n!= 0) 
+12
+     {
+13
+     int d=(int)n%10;
+14
+     if(d!=0)  
+15
+       {
+16
+        p=(int)p*d;
+17
+       }
+18
+     n=(int)n/10;
+19
+     }
+20
+     System.out.println(p);
+21
+    }
+22
+}
